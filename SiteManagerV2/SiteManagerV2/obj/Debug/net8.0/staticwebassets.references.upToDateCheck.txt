@@ -1,0 +1,7 @@
+D:\github\SiteManagerV2\SiteManagerV2\SiteManagerV2.Client\obj\Debug\net8.0\staticwebassets.build.json
+D:\github\SiteManagerV2\SiteManagerV2\SiteManagerV2.Client\obj\Debug\net8.0\staticwebassets.build.json
+D:\github\SiteManagerV2\SiteManagerV2\SiteManagerV2.Client\obj\Debug\net8.0\staticwebassets.build.json
+D:\github\SiteManagerV2\SiteManagerV2\SiteManagerV2.Client\obj\Debug\net8.0\staticwebassets.build.json
+D:\github\SiteManagerV2\SiteManagerV2\SiteManagerV2.Client\obj\Debug\net8.0\staticwebassets.build.json
+D:\github\SiteManagerV2\SiteManagerV2\SiteManagerV2.Client\obj\Debug\net8.0\staticwebassets.build.json
+D:\github\SiteManagerV2\SiteManagerV2\SiteManagerV2.Client\obj\Debug\net8.0\staticwebassets.build.json

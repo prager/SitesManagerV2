@@ -1,0 +1,31 @@
+﻿@page "/sites"
+@inject ISiteService SiteService
+
+<h3>SitesList</h3>
+
+@if(sites == null)
+{
+    <span>Loading ... </span>
+}
+else if(sites.Count == 0)
+{
+    <span>No sites found</span>
+}
+else
+{
+    <ul>
+        @foreach(var site in sites)
+        {
+           <li>@site.Name</li>
+        }
+    </ul>
+}
+
+@code {
+    List<Site>? sites = null;
+
+    protected override async Task OnInitializedAsync()
+    {
+        sites = await SiteService.GetAllSites();
+    }
+}
