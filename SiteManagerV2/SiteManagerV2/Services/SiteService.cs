@@ -15,6 +15,7 @@ namespace SiteManagerV2.Services
 
         public async Task<List<Site>> GetAllSites()
         {
+            await Task.Delay(1000); //simulate delay
             var sites = await _context.Sites.ToListAsync();
             return sites;
         }

@@ -1,0 +1,22 @@
+﻿@page "/edit-site/"
+@page "/edit-site/{id:int}"
+@rendermode InteractiveAuto
+
+<h3>Create Site</h3>
+<EditForm Model="site" OnSubmit="HandleSubmit">
+    <label>Name</label>
+    <InputText @bind-Value="site.Name">@site.Name</InputText>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</EditForm>
+
+@code {
+    [Parameter]
+    public int? id { get; set; }
+    Site site = new Site { Name = string.Empty, Description = string.Empty, Location = string.Empty, Type = string.Empty };
+
+    async Task HandleSubmit()
+    {
+        
+    }
+}

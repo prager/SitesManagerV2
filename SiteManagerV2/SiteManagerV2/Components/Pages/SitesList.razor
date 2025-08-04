@@ -1,5 +1,8 @@
 ﻿@page "/sites"
 @inject ISiteService SiteService
+@inject NavigationManager NavManager
+@* @attribute [StreamRendering(true)] *@
+@rendermode InteractiveServer
 
 <h3>SitesList</h3>
 
@@ -20,12 +23,17 @@ else
         }
     </ul>
 }
-
+<button @onclick="CreateSite" class="btn btn-outline-secondary">Create Site</button>
 @code {
     List<Site>? sites = null;
 
     protected override async Task OnInitializedAsync()
     {
         sites = await SiteService.GetAllSites();
+    }
+
+    private void CreateSite()
+    {
+        NavManager.NavigateTo("/edit-site");
     }
 }
