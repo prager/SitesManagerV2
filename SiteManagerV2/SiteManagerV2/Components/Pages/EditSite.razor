@@ -3,12 +3,21 @@
 @rendermode InteractiveAuto
 
 <h3>Create Site</h3>
-<EditForm Model="site" OnSubmit="HandleSubmit">
-    <label>Name</label>
-    <InputText @bind-Value="site.Name">@site.Name</InputText>
 
-    <button type="submit" class="btn btn-primary">Submit</button>
+<EditForm Model="site" OnSubmit="HandleSubmit">
+<div class="row">
+    <div class="col-lg-6">
+            <label>Name</label>
+            <InputText @bind-Value="site.Name" class="form-control">@site.Name</InputText>
+    </div>
+</div>
+<div class="row mt-3">
+    <div class="col-lg-4 text-center">
+            <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</div>
 </EditForm>
+
 
 @code {
     [Parameter]

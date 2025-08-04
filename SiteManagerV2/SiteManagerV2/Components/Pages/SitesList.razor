@@ -1,29 +1,40 @@
 ﻿@page "/sites"
 @inject ISiteService SiteService
 @inject NavigationManager NavManager
-@* @attribute [StreamRendering(true)] *@
+@* 
+
+@attribute [StreamRendering(true)] *@
 @rendermode InteractiveServer
 
 <h3>SitesList</h3>
-
-@if(sites == null)
-{
-    <span>Loading ... </span>
-}
-else if(sites.Count == 0)
-{
-    <span>No sites found</span>
-}
-else
-{
-    <ul>
-        @foreach(var site in sites)
+<div class="row">
+    <div class="col">
+        @if (sites == null)
         {
-           <li>@site.Name</li>
+            <span>Loading ... </span>
         }
-    </ul>
-}
-<button @onclick="CreateSite" class="btn btn-outline-secondary">Create Site</button>
+        else if (sites.Count == 0)
+        {
+            <span>No sites found</span>
+        }
+        else
+        {
+            <ul>
+                @foreach (var site in sites)
+                {
+                    <li>@site.Name</li>
+                }
+            </ul>
+        }
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <button @onclick="CreateSite" class="btn btn-outline-secondary">Create Site</button>
+    </div>
+</div>
+
+
 @code {
     List<Site>? sites = null;
 
